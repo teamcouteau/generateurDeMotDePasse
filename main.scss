@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css?family=Cuprum&display=swap');
+
+$main-color: rgb(31, 31, 31);
+$snd-color: rgb(213, 212, 255);
+$bg-color: #F44336;
+
+* {
+  box-sizing: border-box;
+  font-family: 'Cuprum', sans-serif;
+}
+input {
+  border: none;
+  background: transparent;
+  outline: none;
+}
+body {
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  height: 100vh;
+  background: $bg-color;
+
+  #password-generator {
+    padding: 2rem;
+    margin: 0 auto;
+    width: 500px;
+    border-radius: 3px;
+    box-shadow: 0 0 2px $main-color;
+    border: 3px solid $snd-color;
+    position: relative;
+    white-space: nowrap;
+
+    #password-output {
+      text-align: center;
+      font-size: 2.5rem;
+      margin: 0 auto 1.2rem;
+      width: 100%;
+    }
+
+    .range {
+      justify-content: space-between;
+      padding: 1rem 1rem 1rem 2.5rem;
+
+      input[type="range"]{
+        -webkit-appearance: none;
+      appearance: none;
+      width: 40%; 
+      max-width: 100%;
+      height: 15px;
+      padding: 0px;
+      background: $snd-color;
+      outline: none; 
+      opacity: 0.7; 
+      -webkit-transition: .2s;
+      transition: opacity .2s;
+      box-shadow: 0 2px 35px rgba(0,0,0,.4555);
+      border-radius: 10px;
+      cursor: pointer;
+      scroll-behavior: smooth;
+      z-index:1;
+      
+      &::-webkit-slider-thumb{
+          -webkit-appearance: none; 
+          appearance: none;
+          width: 15px;
+          height: 15px; 
+          background: black; 
+          cursor: pointer; 
+          border-radius: 18px;
+          transition: .5s ease;
+          
+        &:focus , &:active{
+          padding: 16px;
+          box-shadow:  0 0 10px rgba(0,0,0,.25);
+        }
+      }
+    }
+    #display-password-length {
+      text-align: center;
+      font-size: 1.4rem;
+      width: 80px;
+      padding-top: 10px;
+    }
+  }
+  .flex {
+    margin: 1rem 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+
+    input {
+      display: none;
+
+      &:checked + label {
+        background: $snd-color;
+        filter: brightness(120%);
+        transform: scale(1.1);
+      }
+    }
+
+    label {
+      border: 2px solid $snd-color;
+      border-radius: 4px;
+      padding: .8rem;
+      cursor: pointer;
+      font-size: 1.3rem;
+      text-align: center;
+      display: block;
+      width: 80px;
+      transition: 0.2s ease;
+
+      &:hover {
+        filter: sepia(70%);
+      }
+      }
+    }
+    button {
+      outline: none;
+      background: $snd-color;
+      border: none;
+      padding: 1rem 2rem;
+      margin: .5rem 0;
+      border-radius: 3px;
+      box-shadow: 1px 1px 3px $main-color;
+      text-transform: uppercase;
+      font-size: 1.2rem;
+      transition: 0.2s ease;
+      cursor: pointer;
+
+      &:hover {
+        transform: translateX(4px);
+        filter: brightness(120%);
+      }
+    }
+  }
+}

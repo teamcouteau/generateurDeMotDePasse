@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+  <title>Générateur de mot de passe</title>
+
+  <link href="./style.css" rel="stylesheet">
+  <!-- <link href="./assets/bootstrap.css" rel="stylesheet"> -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    
+</head>
+<body>
+
+  <div id="password-generator">
+
+    <input value="Générateur de Mot de passe PADOA" id="password-output">
+
+    <div class="range">
+      <input 
+        type="range"
+        min="4"
+        max="24"
+        step="1"
+        value="8"
+        id="password-length"
+        oninput="document.getElementById('display-password-length').value=this.value"
+      >
+      <input 
+        type="text"
+        value="8"
+        maxlength="2"
+        id="display-password-length"
+        oninput="document.getElementById('password-length').value=this.value"
+      >
+    </div>
+
+    <div class="flex">
+      <input type="checkbox" id="lowercase" checked="checked">
+      <label for="lowercase">a-z</label>
+
+      <input type="checkbox" id="uppercase">
+      <label for="uppercase">A-Z</label>
+
+      <input type="checkbox" id="numbers">
+      <label for="numbers">0-9</label>
+
+      <input type="checkbox" id="symbols">
+      <label for="symbols">!-?</label>
+    </div>
+
+    <button id="generateButton" type="button" onclick="generatePassword()">Générer mot de passe</button>
+
+  </div>
+
+  
+
+    
+  <script src="./assets/jquery.min.js" type="text/javascript" ></script>
+  <script src="./assets/bootstrap.js" type="text/javascript" ></script>
+  <script src="./script.js" type="text/javascript" ></script>
+
+</body>
+
+
+
+</html>
