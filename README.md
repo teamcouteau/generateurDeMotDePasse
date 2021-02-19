@@ -7,4 +7,4 @@ avec des chiffres
 et avec des caractères spéciaux.
 vous pouvez tout paramétrer et faire un mot de passe allant de 4 caractères à 24 caractères.
 Il sera donc un atout de taille
-![alt text](http://url/to/77aa81f4772792f104c75ccc9652b2ae.png) 
+![alt text](77aa81f4772792f104c75ccc9652b2ae.png) 
